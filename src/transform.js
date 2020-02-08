@@ -23,16 +23,14 @@ const groupAdultsByAgeRange = function(arrayOfObjects) {
     const fiftyAndOlder = arrayOfObjects.filter(
       individualObject => individualObject.age >= 51
     );
-    //console.log(twentyAndYounger);
+
     filteredObject["20 and younger"] = twentyAndYounger;
     filteredObject["21-30"] = twentyOneThirty;
     filteredObject["31-40"] = thirtyOneForty;
     filteredObject["41-50"] = fortyOneFifty;
     filteredObject["51 and older"] = fiftyAndOlder;
-    //console.log(filteredObject);
-    console.log(filteredObject["20 and younger"].length);
+
     if (filteredObject["20 and younger"].length === 0) {
-      console.log(filteredObject["20 and younger"].length);
       delete filteredObject["20 and younger"];
     }
     if (filteredObject["21-30"].length === 0) {
