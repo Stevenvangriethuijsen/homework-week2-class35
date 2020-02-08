@@ -13,6 +13,24 @@ class ShoppingCart {
       pricePerUnit: price
     });
   }
+  clear() {
+    return (this.content = []);
+  }
+  total() {
+    if (this.content.length === 0) {
+      return 0;
+    } else {
+      const total = this.content
+        .map(function(ele) {
+          return ele.pricePerUnit * ele.quantity;
+        })
+        .reduce(function(acc, curr) {
+          return acc + curr;
+        });
+      console.log(total);
+      return total;
+    }
+  }
 }
 
 module.exports = ShoppingCart;
