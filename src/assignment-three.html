@@ -7,12 +7,21 @@
     <title>Assignment Three</title>
   </head>
   <body>
+    <audio id="audio" src="audio/spacemusic.mp3"></audio>
     <div id="header">
       <h1>In a Galaxy Far Far Away</h1>
     </div>
     <div id="characterInfo"></div>
-    <div id="buttonWindow" class="clearMe">
-      <button id="switchButton">DARTH VADER</button>
+    <div id="buttonWindow">
+      <div class="buttons" id="replaceButton">
+        <button id="switchButton">DARTH VADER</button>
+      </div>
+      <div class="buttons">
+        <button id="stop" value="STOP" onclick="pause()">STOP MUSIC</button>
+      </div>
+      <div class="buttons">
+        <button id="play" value="PLAY" onclick="play()">PLAY MUSIC</button>
+      </div>
     </div>
     <script src="scripts/assignment-three.js"></script>
   </body>

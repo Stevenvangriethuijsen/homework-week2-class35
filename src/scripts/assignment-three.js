@@ -29,8 +29,8 @@ function buttonCreationLuke() {
   const button = document.createElement("button");
   button.setAttribute("id", "switchButton");
   button.innerHTML = "Luke Skywalker";
-  const buttonWindow = document.getElementById("buttonWindow");
-  buttonWindow.appendChild(button);
+  const replaceButton = document.getElementById("replaceButton");
+  replaceButton.appendChild(button);
   button.addEventListener("click", function() {
     lukeSkywalker();
   });
@@ -42,8 +42,8 @@ function buttonCreationDarth() {
   const button = document.createElement("button");
   button.setAttribute("id", "switchButton");
   button.innerHTML = "DARTH VADER";
-  const buttonWindow = document.getElementById("buttonWindow");
-  buttonWindow.appendChild(button);
+  const replaceButton = document.getElementById("replaceButton");
+  replaceButton.appendChild(button);
   button.addEventListener("click", function() {
     darthVader();
   });
@@ -69,4 +69,16 @@ function getRandomPosition() {
   var randomY = Math.floor(Math.random() * y);
   return [randomX, randomY];
 }
+
+function play() {
+  const audio = document.getElementById("audio");
+  audio.play();
+}
+
+function pause() {
+  const audio = document.getElementById("audio");
+  audio.pause();
+}
+
+play();
 lukeSkywalker();
