@@ -3,7 +3,6 @@ class ShoppingCart {
     this.content = [];
   }
   getItems() {
-    console.log(this.content);
     return this.content;
   }
   addItem(itemName, quantity, price) {
@@ -27,7 +26,6 @@ class ShoppingCart {
         .reduce(function(acc, curr) {
           return acc + curr;
         });
-      console.log(total);
       return total;
     }
   }
